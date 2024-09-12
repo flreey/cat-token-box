@@ -86,6 +86,7 @@ export class MintCommand extends BoardcastCommand {
         for (let index = 0; index < MAX_RETRY_COUNT; index++) {
           if (options.merge) {
             await this.merge(token, address);
+            return;
           }
           const feeRate = await this.getFeeRate();
           const feeUtxos = await this.getFeeUTXOs(address);
