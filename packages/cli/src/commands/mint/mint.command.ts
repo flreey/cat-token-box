@@ -29,6 +29,7 @@ import { pickLargeFeeUtxo } from '../send/pick';
 interface MintCommandOptions extends BoardcastCommandOptions {
   id: string;
   new?: number;
+  merge?: boolean; // 添加这一行
 }
 
 function getRandomInt(max: number) {
